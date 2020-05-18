@@ -1,0 +1,72 @@
+.username-dt {
+    background-color: black;
+}
+
+.imgPreview > img {
+    width: 120px;
+    height: 120px;
+}
+.acc-setting {
+    position: absolute;
+    width: 800px;
+    height: 900px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px;
+    opacity: 1;
+    box-shadow: 0 0 25px;
+    transition: all 0.5s cubic-bezier(0.445, 0.85, 0, 1);
+    transition-delay: 0s;
+    color: #fff;
+    background-color: rgba(170, 62, 62, 0.9);
+    z-index: 999;
+}
+.acc-setting p {
+    color: #fff;
+}
+.acc-setting h3 {
+    color: #fff;
+}
+.cp-field h5 {
+    color: #fff;
+}
+.cpp-fiel input {
+    width: 100%;
+    /* padding: 15px 0;
+    margin: 10px 0; */
+    border: none;
+    color: #fff;
+    outline: none;
+    border-bottom: 2px solid #fff;
+    background-color: transparent;
+}
+.save-stngs.pd2 button {
+    border: 2px solid transparent;
+    outline: none;
+    text-align: center;
+    width: 100%;
+    padding: 13px 10px;
+    background-color: #7e87cf;
+    color: #fff;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 35px;
+    cursor: pointer;
+    transition: 0.5s all;
+    transform: translate(110%, -50%);
+    width: 220px;
+    height: 60px;
+}
+.save-stngs.pd2 button:hover {
+    background-color: transparent;
+    border: 2px solid rgba(51, 96, 219, 0.467);
+}
+.fa .fa-users::before {
+    font-size: 100px;
+}
+.post_project {
+    cursor: pointer;
+}
