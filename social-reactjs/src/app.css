@@ -70,3 +70,28 @@
 .post_project {
     cursor: pointer;
 }
+.searchboxWrapper {
+    background-color: #fff;
+    border-radius: 0.3rem;
+    border: 1px solid #ddd;
+    display: inline-block;
+    padding: 15px;
+    box-shadow: 0 0.3rem 1rem rgba(8, 38, 78, 0.2);
+}
+/* -------------------------------------- */
+.emoji-mart {
+    position: absolute;
+    bottom: 20px;
+    right: 10px;
+}
+.toggle-emoji {
+    border: none;
+    width: 50px;
+    height: auto;
+    padding: 0;
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* -------------------------------------- */
