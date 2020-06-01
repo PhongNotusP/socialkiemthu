@@ -1,6 +1,9 @@
 {
+  "name": "NodeJS",
   "version": "1.0.0",
   "main": "index.js",
+  "repository": "https://github.com/minhquan3197/NodeJS-Social.git",
+  "author": "minhquan3197 <minhquan.k0r1@gmail.com>",
   "license": "MIT",
   "scripts": {
     "test": "nodemon --exec mocha --recursive",

@@ -11,7 +11,7 @@ class Login extends Component {
     super();
     this.handleSubscribe = this.handleSubscribe.bind(this);
     this.verifyCallback = this.verifyCallback.bind(this);
-    this.Capcha = this.Capcha.bind(this);
+    this.capcha = this.capcha.bind(this);
     this.state = {
       email: "test@gmail.com",
       password: "tester123",
@@ -54,12 +54,11 @@ class Login extends Component {
 
   handleSubscribe() {
     if (this.state.isVerified) {
-      alert("Đã xác thực");
     } else {
       alert("Hãy xác thực không phải robot");
     }
   }
-  Capcha() {
+  capcha() {
     if (this.state.isVerifiedtrue) {
       document.getElementById("dangnhap").disabled = false;
     } else {
@@ -90,7 +89,6 @@ class Login extends Component {
                 type="submit"
                 onClick={() => {
                   this.handleSubscribe();
-                  this.Capcha();
                 }}
               >
                 Đăng nhập
@@ -100,7 +98,6 @@ class Login extends Component {
                 render="explicit"
                 verifyCallback={this.verifyCallback}
               />
-              ,
             </li>
           </ul>
         </div>
