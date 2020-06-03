@@ -9,7 +9,7 @@ import Information from "./components/account/Information";
 import Social from "./components/account/Social";
 import Friend from "./components/friend/FriendList";
 import Room from "./components/message/Room";
-import jobs from "./components/Jobs/jobs";
+import Jobs from "./components/Jobs/Jobs";
 //Layout
 import AccountLayout from "./components/layouts/AccountLayout";
 import GeneralLayout from "./components/layouts/GeneralLayout";
@@ -84,7 +84,7 @@ const routes = [
     path: "/jobs",
     exact: true,
     layout: GeneralLayout,
-    main: jobs,
+    main: Jobs,
   },
 ];
 

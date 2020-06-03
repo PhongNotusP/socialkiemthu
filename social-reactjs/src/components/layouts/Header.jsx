@@ -59,6 +59,17 @@ class Header extends Component {
               </Link>
             </li>
             <li>
+              <Link to="/profile">
+                <span>
+                  <img
+                    src={window.location.origin + "/template/images/icon3.png"}
+                    alt="Logo"
+                  />
+                </span>
+                Cá nhân
+              </Link>
+            </li>
+            <li>
               <Link to="/chat">
                 <span>
                   <img
@@ -82,10 +93,34 @@ class Header extends Component {
             {user.name ? (
               <a href="#!">{user.name.split(" ").slice(-1).join(" ")}</a>
             ) : null}
-            <i className="la la-sort-down" />
+            <i
+              style={{ transform: "translate(50%,-40%)" }}
+              className="la la-sort-down"
+            />
           </div>
           <div className="user-account-settingss">
-            <h3>Chỉnh sửa</h3>
+            <h3>Online Status</h3>
+            <ul className="on-off-status">
+              <li>
+                <div className="fgt-sec">
+                  <input type="radio" name="cc" id="c5" />
+                  <label htmlFor="c5">
+                    <span />
+                  </label>
+                  <small>Online</small>
+                </div>
+              </li>
+              <li>
+                <div className="fgt-sec">
+                  <input type="radio" name="cc" id="c6" />
+                  <label htmlFor="c6">
+                    <span />
+                  </label>
+                  <small>Offline</small>
+                </div>
+              </li>
+            </ul>
+
             <ul className="us-links">
               <li>
                 <Link to="/account">Chỉnh sửa thông tin</Link>

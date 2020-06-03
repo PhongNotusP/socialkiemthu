@@ -6,6 +6,7 @@ import LoginForm from "../form/LoginForm";
 import Sidebar from "./Sidebar";
 import Spinner from "../common/Spinner";
 import Recaptcha from "react-recaptcha";
+import Register from "./Register";
 class Login extends Component {
   constructor() {
     super();
@@ -53,10 +54,10 @@ class Login extends Component {
   }
 
   handleSubscribe() {
-    if (this.state.isVerified) {
-    } else {
-      alert("Hãy xác thực không phải robot");
-    }
+    // if (this.state.isVerified) {
+    // } else {
+    //   alert("Hãy xác thực không phải robot");
+    // }
   }
   capcha() {
     if (this.state.isVerifiedtrue) {
@@ -81,75 +82,105 @@ class Login extends Component {
       loginLoading = <Spinner />;
     } else {
       loginLoading = (
-        <div className="save-stngs pd2">
-          <ul>
-            <li>
-              <button
-                id="dangnhap"
-                type="submit"
-                onClick={() => {
-                  this.handleSubscribe();
-                }}
-              >
-                Đăng nhập
-              </button>
-              <Recaptcha
-                sitekey="6Lcy__MUAAAAAEdFIyNp0jdNL51a7P42mENRD5is"
-                render="explicit"
-                verifyCallback={this.verifyCallback}
-              />
-            </li>
-          </ul>
+        <div className="col-lg-12 no-pdd">
+          <button
+            id="dangnhap"
+            type="submit"
+            onClick={() => {
+              this.handleSubscribe();
+            }}
+          >
+            Đăng nhập
+          </button>
+          {/* <Recaptcha
+            sitekey="6Lcy__MUAAAAAEdFIyNp0jdNL51a7P42mENRD5is"
+            render="explicit"
+            verifyCallback={this.verifyCallback}
+          /> */}
         </div>
       );
     }
     return (
-      <section className="profile-account-setting">
-        <div className="container">
-          <div className="account-tabs-setting">
-            <div className="row">
-              <Sidebar />
-              <div className="col-lg-9">
-                <div className="tab-content">
-                  <div className="acc-setting">
-                    <h3 style={{ textAlign: "center" }}> Đăng nhập</h3>
-                    <h3 style={{ textAlign: "center" }}>Tài khoản test</h3>
-                    <p style={{ textAlign: "center" }}> </p>
-                    <p style={{ textAlign: "center" }}></p>
-                    <form onSubmit={this.onSubmit}>
-                      <LoginForm
-                        label="E-mail"
-                        name="email"
-                        placeholder="E-mail tài khoản"
-                        icon="fa fa-user"
-                        value={this.state.email}
-                        onChange={this.onChange}
-                        error={errors.email}
-                      />
-                      <LoginForm
-                        label="Mật khẩu"
-                        name="password"
-                        type="password"
-                        placeholder="Mật khẩu tài khoản"
-                        icon="fa fa-lock"
-                        value={this.state.password}
-                        onChange={this.onChange}
-                        error={errors.password}
-                      />
-                      {loginLoading}
-                    </form>
-                    {/* <div
-                      style={{ marginLeft: "220px" }}
-                      class="g-recaptcha"
-                      data-sitekey="6Lcy__MUAAAAAEdFIyNp0jdNL51a7P42mENRD5is"
-                    ></div> */}
+      <div className="sign-in">
+        <div className="wrapper">
+          <div className="sign-in-page">
+            <div className="signin-popup">
+              <div className="signin-pop">
+                <div className="row">
+                  <Sidebar />
+                  <div className="col-lg-6">
+                    <div className="login-sec">
+                      <ul className="sign-control">
+                        <li data-tab="tab-1" className="current">
+                          <a href="#" title="">
+                            Đăng nhập
+                          </a>
+                        </li>
+                        <li data-tab="tab-2">
+                          <a href="#" title="">
+                            Đăng ký
+                          </a>
+                        </li>
+                      </ul>
+                      <div className="sign_in_sec current" id="tab-1">
+                        <h3>Đăng nhập</h3>
+                        <form onSubmit={this.onSubmit}>
+                          <div className="row">
+                            <div className="col-lg-12 no-pdd">
+                              <div className="sn-field">
+                                <LoginForm
+                                  label="E-mail"
+                                  name="email"
+                                  placeholder="E-mail tài khoản"
+                                  icon="fa fa-user"
+                                  value={this.state.email}
+                                  onChange={this.onChange}
+                                  error={errors.email}
+                                />
+                              </div>
+                            </div>
+                            <div className="col-lg-12 no-pdd">
+                              <div className="sn-field">
+                                <LoginForm
+                                  label="Mật khẩu"
+                                  name="password"
+                                  type="password"
+                                  placeholder="Mật khẩu tài khoản"
+                                  icon="fa fa-lock"
+                                  value={this.state.password}
+                                  onChange={this.onChange}
+                                  error={errors.password}
+                                />
+                              </div>
+                            </div>
+
+                            <div className="col-lg-12 no-pdd">
+                              <div className="checky-sec">
+                                <div className="fgt-sec">
+                                  <input type="checkbox" name="cc" id="c1" />
+                                  <label>
+                                    <span></span>
+                                  </label>
+                                  <small>Ghi nhớ</small>
+                                </div>
+                                <a href="#" title="">
+                                  Quên mật khẩu?
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                          {loginLoading}
+                        </form>
+                      </div>
+                      <Register />
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </section>
+      </div>
     );
   }
 }

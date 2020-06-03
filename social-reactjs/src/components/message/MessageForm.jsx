@@ -73,7 +73,7 @@ class MessageForm extends Component {
               />
             ) : null}
           </button>
-          <div
+          {/* <div
             className="searchboxWrapper"
             style={{ transform: "translate(-18px, 0px)" }}
           >
@@ -85,7 +85,7 @@ class MessageForm extends Component {
                 { mq: "700px", columns: 3, imageWidth: 120, gutter: 5 },
               ]}
             />
-          </div>
+          </div> */}
           {/* <Picker
             onSelect={this.addEmoji}
             style={{

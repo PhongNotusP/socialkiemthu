@@ -1,5 +1,5 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from "react";
+import PropTypes from "prop-types";
 
 const LoginForm = ({
   name,
@@ -10,26 +10,23 @@ const LoginForm = ({
   onChange,
   disabled,
   label,
-  icon
+  icon,
 }) => {
   return (
-    <div className='cp-field'>
-      <h5>{label}</h5>
-      <div className='cpp-fiel'>
-        <input
-          type={type}
-          name={name}
-          placeholder={placeholder}
-          value={value}
-          onChange={onChange}
-          disabled={disabled}
-        />
-        <i className={icon}></i>
-        {error && <p className='text-danger'>{error}</p>}
-      </div>
+    <div className="sn-field">
+      <input
+        type={type}
+        name={name}
+        placeholder={placeholder}
+        value={value}
+        onChange={onChange}
+        disabled={disabled}
+      />
+      <i className={icon}></i>
+      {error && <p className="text-danger">{error}</p>}
     </div>
-  )
-}
+  );
+};
 
 LoginForm.propTypes = {
   name: PropTypes.string.isRequired,
@@ -40,9 +37,9 @@ LoginForm.propTypes = {
   error: PropTypes.string,
   type: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
-  disabled: PropTypes.string
-}
+  disabled: PropTypes.string,
+};
 LoginForm.defaultProps = {
-  type: 'text'
-}
-export default LoginForm
+  type: "text",
+};
+export default LoginForm;
