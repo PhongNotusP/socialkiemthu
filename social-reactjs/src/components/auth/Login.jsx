@@ -14,8 +14,8 @@ class Login extends Component {
     this.verifyCallback = this.verifyCallback.bind(this);
     this.capcha = this.capcha.bind(this);
     this.state = {
-      email: "test@gmail.com",
-      password: "tester123",
+      email: "",
+      password: "",
       errors: {},
       isVerified: false,
     };
@@ -102,7 +102,7 @@ class Login extends Component {
     }
     return (
       <div className="sign-in">
-        <div className="wrapper">
+        <div className="wrapper" style={{ backgroundColor: "#d43535" }}>
           <div className="sign-in-page">
             <div className="signin-popup">
               <div className="signin-pop">

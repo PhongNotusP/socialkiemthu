@@ -13,6 +13,7 @@ import Jobs from "./components/Jobs/Jobs";
 //Layout
 import AccountLayout from "./components/layouts/AccountLayout";
 import GeneralLayout from "./components/layouts/GeneralLayout";
+import Doc from "./components/Jobs/Doc";
 const routes = [
   {
     path: "/",
@@ -85,6 +86,12 @@ const routes = [
     exact: true,
     layout: GeneralLayout,
     main: Jobs,
+  },
+  {
+    path: "/doc",
+    exact: true,
+    layout: GeneralLayout,
+    main: Doc,
   },
 ];
 
